@@ -1,0 +1,256 @@
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  background: url('../image/logo.png') no-repeat;
+  background-size: contain;
+  margin-left: 150px;
+  width: 220px;
+  height: 80px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search-container {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fff;
+  border: 2px solid #ff44ff;
+  padding: 5px;
+}
+
+#search-input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 10px;
+  margin-right: 10px;
+  width: 600px;
+}
+
+#search-button {
+  background: url('../image/search_button.png') no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 25px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+header::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #e1e1e1;
+  margin-top: 10px;
+}
+
+.filter-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-container input[type="checkbox"] {
+  display: none;
+}
+
+.filter-container label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 70px;
+  border-radius: 100px;
+  background-color: #e5e5e5;
+  font-size: 15px;
+  color: #000000;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.filter-container label:hover {
+  background-color: #afafaf;
+}
+
+.filter-container input[type="checkbox"]:checked+label {
+  background-color: #9d229d;
+  color: #fff;
+}
+
+#dataPerPage {
+  margin-left: 50px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  color: #000000;
+  cursor: pointer;
+}
+
+#dataPerPage option {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#dataPerPage:hover,
+#dataPerPage:focus {
+  background-color: #afafaf;
+}
+
+#dataPerPage:hover option,
+#dataPerPage:focus option {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.event-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.event {
+  display: inline-block;
+  width: calc(20% - 40px);
+  vertical-align: top;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 35px;
+  margin-bottom: 50px;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+
+.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.text-container {
+  padding: 10px;
+  box-sizing: border-box;
+  height: 120px;
+  overflow: hidden;
+}
+
+a {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 10px;
+}
+
+li {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.event:hover a {
+  color: #fff;
+}
+
+.event:hover .text-container {
+  background-color: #333;
+}
+
+.event:hover li {
+  color: #fff;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap; /* 페이지 번호 버튼이 여러 줄에 걸쳐 표시되도록 설정 */
+}
+
+/* .pagination-container button 스타일 수정 */
+.pagination-container button {
+  border: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 3px;
+  outline: none; /* 포커스 표시 제거 */
+  transition: background-color 0.3s ease; /* 배경색 변경에 애니메이션 효과 추가 */
+}
+
+.pagination-container button:hover {
+  background-color: #555555; /* 마우스 호버 시 배경색 진한 색상으로 변경 */
+  color: #ffffff;
+}
+
+/* .current-page 스타일 수정 */
+.current-page {
+  background-color: #555555; /* 현재 버튼 배경색 */
+  color: #ffffff; /* 현재 버튼 텍스트색 */
+  font-weight: bold; /* 현재 버튼 텍스트 굵게 표시 */
+}
+
+/* #page-number 스타일 수정 */
+#page-number {
+  font-size: 16px;
+  margin: 10px 0; /* 좌우 여백 삭제 */
+  display: flex; /* 페이지 번호를 가로로 나열하기 위해 flex 설정 */
+  justify-content: center; /* 가운데 정렬 */
+  align-items: center; /* 수직 정렬 */
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+footer p span {
+  font-weight: bold;
+}

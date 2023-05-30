@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>서울시 문화행사 정보</title>
+  <link rel="stylesheet" href="./css/index.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <h1 class="title" onclick="refreshPage()"></h1>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="검색어를 입력하세요...">
+        <button id="search-button"></button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- 구 이름 선택 필터 -->
+    <div class="filter-container">
+      <input id="강남구" type="checkbox">
+      <label for="강남구">강남구</label>
+      <input id="강동구" type="checkbox">
+      <label for="강동구">강동구</label>
+      <input id="강북구" type="checkbox">
+      <label for="강북구">강북구</label>
+      <input id="강서구" type="checkbox">
+      <label for="강서구">강서구</label>
+      <input id="관악구" type="checkbox">
+      <label for="관악구">관악구</label>
+      <input id="광진구" type="checkbox">
+      <label for="광진구">광진구</label>
+      <input id="구로구" type="checkbox">
+      <label for="구로구">구로구</label>
+      <input id="금천구" type="checkbox">
+      <label for="금천구">금천구</label>
+      <input id="노원구" type="checkbox">
+      <label for="노원구">노원구</label>
+      <input id="도봉구" type="checkbox">
+      <label for="도봉구">도봉구</label>
+      <input id="동대문구" type="checkbox">
+      <label for="동대문구">동대문구</label>
+      <input id="동작구" type="checkbox">
+      <label for="동작구">동작구</label>
+      <input id="마포구" type="checkbox">
+      <label for="마포구">마포구</label>
+      <input id="서대문구" type="checkbox">
+      <label for="서대문구">서대문구</label>
+      <input id="서초구" type="checkbox">
+      <label for="서초구">서초구</label>
+      <input id="성동구" type="checkbox">
+      <label for="성동구">성동구</label>
+      <input id="성북구" type="checkbox">
+      <label for="성북구">성북구</label>
+      <input id="송파구" type="checkbox">
+      <label for="송파구">송파구</label>
+      <input id="양천구" type="checkbox">
+      <label for="양천구">양천구</label>
+      <input id="영등포구" type="checkbox">
+      <label for="영등포구">영등포구</label>
+      <input id="용산구" type="checkbox">
+      <label for="용산구">용산구</label>
+      <input id="은평구" type="checkbox">
+      <label for="은평구">은평구</label>
+      <input id="종로구" type="checkbox">
+      <label for="종로구">종로구</label>
+      <input id="중구" type="checkbox">
+      <label for="중구">중구</label>
+      <input id="중랑구" type="checkbox">
+      <label for="중랑구">중랑구</label>
+    </div>
+
+    <!-- 페이지 당 데이터 수 선택 -->
+    <select id="dataPerPage">
+      <option value="10">10개씩 보기</option>
+      <option value="30">30개씩 보기</option>
+      <option value="50">50개씩 보기</option>
+    </select>
+
+    <!-- 이벤트 목록 -->
+    <div class="event-layout">
+      <div id="events"></div>
+      <!-- 페이지네이션 -->
+      <div class="pagination-container">
+        <button id="prev-page">이전</button>
+        <span id="page-number"></span>
+        <button id="next-page">다음</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 박진혁, 박종혁, 이영빈, 김준현, 최지훈</p>
+  </footer>
+  <script src="./javascript/index.js"></script>
+</body>
+
+</html>
