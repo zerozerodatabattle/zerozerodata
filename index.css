@@ -4,7 +4,7 @@
 }
 
 .title {
-  background: url('../image/logo.png') no-repeat;
+  background: url('image/logo.png') no-repeat;
   background-size: contain;
   margin-left: 150px;
   width: 220px;
@@ -34,7 +34,7 @@
 }
 
 #search-button {
-  background: url('../image/search_button.png') no-repeat;
+  background: url('image/search_button.png') no-repeat;
   background-size: contain;
   width: 30px;
   height: 25px;
