@@ -1,4 +1,20 @@
-const apiUrl = 'http://openapi.seoul.go.kr:8088/6d4b544c4170617237377841787353/xml/culturalEventInfo/1/999';
+import express from 'express';
+import request from 'request';
+
+const app = express();
+
+const apiUrl = '/api/culturalEventInfo/1/999';
+
+app.use('/', (req, res) => {
+  const url = apiUrl + req.url;
+  req.pipe(request(url)).pipe(res);
+});
+
+const port = 443;
+app.listen(port, () => {
+  console.log(`Proxy server is running on port ${port}`);
+});
+
 
 const eventsDiv = document.getElementById('events');
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
