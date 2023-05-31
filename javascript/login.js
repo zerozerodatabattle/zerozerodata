@@ -13,6 +13,6 @@ function nextPage() {
     alert("비밀번호를 입력해주세요.");
   } else {
     // 아이디와 비밀번호를 모두 입력한 경우 메인 페이지로 이동
-    window.location.href = "../html/index.html";
+    window.location.href = "../index.html";
   }
 }
