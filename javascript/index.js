@@ -3,7 +3,7 @@ const request = require('request');
 
 const app = express();
 
-const apiUrl = 'http://openapi.seoul.go.kr:8088/6d4b544c4170617237377841787353/xml/culturalEventInfo/1/999';
+const apiUrl = '/api/culturalEventInfo/1/999';
 
 app.use('/', (req, res) => {
   const url = apiUrl + req.url;
