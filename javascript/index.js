@@ -1,4 +1,4 @@
-const apiUrl = 'http://openapi.seoul.go.kr:8088/6d4b544c4170617237377841787353/xml/culturalEventInfo/1/999';
+const apiUrl = 'https://openapi.seoul.go.kr:8088/6d4b544c4170617237377841787353/xml/culturalEventInfo/1/999';
 
 const eventsDiv = document.getElementById('events');
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
