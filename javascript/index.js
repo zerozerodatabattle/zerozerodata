@@ -10,7 +10,7 @@ app.use('/', (req, res) => {
   req.pipe(request(url)).pipe(res);
 });
 
-const port = 3000;
+const port = 443;
 app.listen(port, () => {
   console.log(`Proxy server is running on port ${port}`);
 });
