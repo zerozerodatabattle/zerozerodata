@@ -1,5 +1,5 @@
-import express from 'express';
-import request from 'request';
+const express = require('express');
+const request = require('request');
 
 const app = express();
 
@@ -10,10 +10,11 @@ app.use('/', (req, res) => {
   req.pipe(request(url)).pipe(res);
 });
 
-const port = 443;
+const port = 3000
 app.listen(port, () => {
   console.log(`Proxy server is running on port ${port}`);
 });
+
 
 
 const eventsDiv = document.getElementById('events');
@@ -168,7 +169,7 @@ checkboxes.forEach(checkbox => {
       .map(checkbox => checkbox.id); // 선택된 지역의 ID를 배열로 추출
     const filteredItems = Array.from(xmlDoc.getElementsByTagName('row'))
       .filter(item => {
-        const guname = item.getElementsByTagName('GUNAME')[0].childNodes[0]?.nodeValue; // 아이템의 지역명 추출
+        const guname = item.getElementsByTagName('GUNAME')[0].childNodes[0]?.nodeValue ?? '지역정보없음'; // 아이템의 지역명 추출
         return checkedGunames.length === 0 || checkedGunames.includes(guname); // 선택된 지역이 아닌 경우 필터링
       });
     currentPage = 1; // 페이지를 첫 번째 페이지로 초기화
