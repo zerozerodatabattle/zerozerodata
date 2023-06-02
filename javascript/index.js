@@ -33,7 +33,7 @@ function displayPageItems(items) {
     const title = item.getElementsByTagName('TITLE')[0].childNodes[0].nodeValue; // 제목 정보 추출
     const guname = item.getElementsByTagName('GUNAME')[0].childNodes[0]?.nodeValue ?? '지역정보가 없습니다.'; // 지역 정보 추출
     const imgUrl = item.getElementsByTagName('MAIN_IMG')[0].childNodes[0].nodeValue; // 이미지 URL 추출
-    const time = item.getElementsByTagName('DATE')[0].childNodes[0].nodeValue; // 시간 정보 추출
+    const time = item.getElementsByTagName('DATE')[0].childNodes[0].nodeValue ?? '시간정보가 없습니다.'; // 시간 정보 추출
     const orgLink = item.getElementsByTagName('ORG_LINK')[0].childNodes[0].nodeValue; // 원본 링크 추출
 
     const eventDiv = document.createElement('div');
